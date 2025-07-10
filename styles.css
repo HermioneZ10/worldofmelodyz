@@ -1,0 +1,274 @@
+/* Default page font: clean & readable */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff0f5;
+  margin: 0;
+  display: flex; /* center content horizontally */
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Container for all visible content */
+.container {
+  text-align: center;
+  background-color: #fff5fa;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 192, 203, 0.4);
+}
+
+/* Elegant main heading */
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #d14ea0;
+  margin-bottom: 10px;
+}
+
+/* Clean paragraph using Poppins by default */
+p {
+  font-size: 1.8rem;
+  color: #d14ea0;
+  margin-bottom: 20px;
+}
+
+/* Optional fancy paragraph style */
+.fancy-text {
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Picture with rounded corners and shadow */
+.melody-full {
+  display: block;
+  max-width: 300px;
+  height: auto;
+  border-radius: 16px;
+  border: 4px solid #ffc0cb;
+  box-shadow: 0 10px 20px rgba(255, 182, 193, 0.6);
+}
+
+/* Frame around photo */
+.photo-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  border: 8px dotted #ffccde;
+  border-radius: 24px;
+  background: #fff0f5;
+  box-shadow: 0 8px 16px rgba(255, 182, 193, 0.3);
+  width: fit-content;
+  margin: 0 auto 30px auto;
+}
+
+/* Cute pink button */
+button {
+  background-color: #ff69b4;
+  color: white;
+  font-size: 18px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(255, 105, 180, 0.4);
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #ff85c1;
+  transform: scale(1.05);
+}
+
+/* Floating container for hearts */
+#balloon-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* Heart shape base */
+.heart {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle at 30% 30%, #ff4da6, #ff85c1);
+  transform: rotate(-45deg);
+  animation: float 4s ease-out forwards;
+}
+
+/* Two rounded circles to make the top of the heart */
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle at 30% 30%, #ff4da6, #ff85c1);
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -20px;
+  left: 0;
+}
+
+.heart::after {
+  left: 20px;
+  top: 0;
+}
+
+/* Heart float animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1) rotate(-45deg);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.2) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+/* Styling for the dance photo section */
+.dance-gallery {
+  display: flex; /* places them in a row */
+  gap: 20px; /* spacing between photos */
+  justify-content: center;
+  flex-wrap: wrap; /* lets them wrap on small screens */
+  margin-top: 30px;
+}
+
+.dance-gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(255, 182, 193, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.dance-gallery img:hover {
+  transform: scale(1.05); /* zooms a little on hover */
+}
+
+.nav-buttons {
+  margin-top: 40px; /* adds space above buttons */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-btn {
+  background-color: #ff69b4;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 18px;
+  box-shadow: 0 5px 10px rgba(255, 105, 180, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.nav-btn:hover {
+  background-color: #ff85c1;
+  transform: scale(1.05);
+}
+
+/* Sticker section container */
+.sticker-board {
+  display: flex;
+  justify-content: center;
+  gap: 40px;           /* spacing between stickers */
+  margin-top: 30px;
+  flex-wrap: wrap;     /* lets stickers wrap if screen is small */
+}
+
+/* Sticker style */
+.sticker {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2)); /* soft shadow like a real sticker */
+  transform: rotate(-2deg); /* slightly crooked like hand-placed */
+  transition: transform 0.3s ease;
+}
+
+.sticker:hover {
+  transform: rotate(0deg) scale(1.05); /* gentle wiggle when hovered */
+}
+
+/* Container for the sticker and speech */
+.sticker {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  width: 120px;
+  height: auto;
+}
+
+/* The actual sticker image */
+.sticker img {
+  width: 100px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.sticker:hover img {
+  transform: scale(1.05); /* tiny bounce on hover */
+}
+
+/* The speech bubble */
+.speech {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff0f5;
+  color: #d14ea0;
+  padding: 6px 10px;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Show bubble only on hover */
+.sticker:hover .speech {
+  opacity: 1;
+}
+
+.sticker {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  width: 120px;
+  height: 120px; /* Force same height */
+  text-align: center;
+  vertical-align: top;
+}
+
+.sticker img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.2s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  border-radius: 0; /* Remove soft corners if you want cleaner sticker look */
+}
+
+.sticker:hover img {
+  transform: scale(1.05);
+}

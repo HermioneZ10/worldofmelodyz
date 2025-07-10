@@ -1,0 +1,65 @@
+<!-- HTML5 page -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Melody's Magical Page</title>
+
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Pretty font from Google -->
+  <!-- Load Great Vibes for headings -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+
+<!-- Load Poppins for body text -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+<!-- Link your main CSS file -->
+<link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+  <div class="container">
+  <div class="sticker">
+  <img src="mymelody1.png" alt="Sticker 1" />
+  <span class="speech">HI!</span>
+</div>
+
+<div class="sticker">
+  <img src="mymelody2.png" alt="Sticker 2" />
+  <span class="speech">Nice To Meet You!</span>
+</div>
+
+<div class="sticker">
+  <img src="mymelody3.png" alt="Sticker 3" />
+  <span class="speech">Welcome To My Webpage!</span>
+</div>
+    <div class="photo-frame">
+      <!-- Your photo (make sure this file is named melody.jpg!) -->
+      <img src="melody.jpg" alt="Melody in costume" class="melody-full" />
+    </div>
+
+    <h1>Hello From My Webpage!</h1>
+    <p class="fancy-text">This is my magical, pink, sparkly space all about me! 💕</p>
+
+    <!-- Button that triggers the hearts -->
+    <button onclick="releaseHearts()">Click Me!</button>
+    <!-- This link lets you visit the second page of your website -->
+<a href="page1.html">
+  <button>Go to Page 1 →</button>
+</a>
+
+  </div>
+
+
+  <!-- Hearts will appear inside this box -->
+  <div id="balloon-container"></div>
+
+  <!-- JavaScript file that makes things float and sparkle -->
+  <script src="script.js"></script>
+</body>
+</html>

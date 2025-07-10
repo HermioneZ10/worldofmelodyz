@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Melody’s World</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff0f5;
+      text-align: center;
+      padding-top: 100px;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid pink;
+    }
+    button {
+      margin-top: 12px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff85c1;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔐 Melody’s World</h1>
+  <p>Enter the secret password to come in 💕</p>
+  <input type="password" id="passwordInput" placeholder="Password..." />
+  <br />
+  <button onclick="checkPassword()">Enter</button>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById("passwordInput").value;
+      if (password === "gujiguji") {
+        window.location.href = "index.html"; // sends you to homepage
+      } else {
+        alert("Nope! Try again 💔");
+      }
+    }
+  </script>
+</body>
+</html>
