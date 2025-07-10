@@ -26,3 +26,12 @@ function releaseHearts() {
     }, 5000);
   }
 }
+
+function checkPassword() {
+  const password = document.getElementById("passwordInput").value;
+  if (password === "gujiguji") {
+    window.location.href = "home.html"; // This is your real homepage
+  } else {
+    alert("Nope! Try again 💔");
+  }
+}
